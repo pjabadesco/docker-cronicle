@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  cronicle:
+  app:
     build: .
     hostname: cronicle
     ports:
@@ -16,27 +16,27 @@ services:
     #   - "cronicle.lab.io:0.0.0.0"
     environment:
       - TZ=Asia/Manila
-      - CRONICLE_base_url=http://localhost:3012
-      - CRONICLE_master_hostname=cronicle
-      - CRONICLE_master_port=3012
-      - CRONICLE_master_fqdn=cronicle
-      - CRONICLE_master_https=0
-      - CRONICLE_master_http_port=3012
-      - CRONICLE_master_http_auth=0
-      - CRONICLE_master_http_username=admin
-      - CRONICLE_master_http_password=admin123
-      - CRONICLE_master_allow_remote=0
-      - CRONICLE_master_allow_remote_auth=0
-      - CRONICLE_master_allow_remote_username=
-      - CRONICLE_master_allow_remote_password=
-      - CRONICLE_master_allow_remote_admin=0
-      - CRONICLE_master_allow_remote_admin_username=
-      - CRONICLE_master_allow_remote_admin_password=
-      - CRONICLE_master_allow_remote_admin_ips=
-      - CRONICLE_master_allow_remote_admin_ips_whitelist=0
-      - CRONICLE_master_allow_remote_admin_ips_whitelist_ips=
-    healthcheck:
-      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:3012/api/app/ping || exit 1"]
-      interval: 5s
-      timeout: 1s
-      retries: 3
+      # - CRONICLE_base_url=http://localhost:3012
+      # - CRONICLE_master_hostname=cronicle
+      # - CRONICLE_master_port=3012
+      # - CRONICLE_master_fqdn=cronicle
+      # - CRONICLE_master_https=0
+      # - CRONICLE_master_http_port=3012
+      # - CRONICLE_master_http_auth=0
+      # - CRONICLE_master_http_username=admin
+      # - CRONICLE_master_http_password=admin123
+      # - CRONICLE_master_allow_remote=0
+      # - CRONICLE_master_allow_remote_auth=0
+      # - CRONICLE_master_allow_remote_username=
+      # - CRONICLE_master_allow_remote_password=
+      # - CRONICLE_master_allow_remote_admin=0
+      # - CRONICLE_master_allow_remote_admin_username=
+      # - CRONICLE_master_allow_remote_admin_password=
+      # - CRONICLE_master_allow_remote_admin_ips=
+      # - CRONICLE_master_allow_remote_admin_ips_whitelist=0
+      # - CRONICLE_master_allow_remote_admin_ips_whitelist_ips=
+    # healthcheck:
+    #   test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:3012/api/app/ping || exit 1"]
+    #   interval: 5s
+    #   timeout: 1s
+    #   retries: 3
